@@ -2,6 +2,16 @@
   "name": "sumline",
   "version": "0.1.0",
   "description": "Browser-based XLSX spreadsheet editor for desktop and mobile, with formulas, charts, shapes and printing to PDF: the built app, ready to host as static files",
+  "keywords": [
+    "charts",
+    "excel",
+    "formula-engine",
+    "office",
+    "pdf",
+    "spreadsheet",
+    "spreadsheet-editor",
+    "xlsx"
+  ],
   "homepage": "https://github.com/mas-ony/office-sumline#readme",
   "bugs": {
     "url": "https://github.com/mas-ony/office-sumline/issues"
