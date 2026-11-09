@@ -1,0 +1,22 @@
+{
+  "name": "sumline",
+  "version": "0.1.0",
+  "description": "Browser-based XLSX spreadsheet editor for desktop and mobile, with formulas, charts, shapes and printing to PDF: the built app, ready to host as static files",
+  "homepage": "https://github.com/mas-ony/office-sumline#readme",
+  "bugs": {
+    "url": "https://github.com/mas-ony/office-sumline/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mas-ony/office-sumline.git",
+    "directory": "npm"
+  },
+  "license": "MIT",
+  "author": "Ony Octavianto",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "pnpm --dir .. run build:npm"
+  }
+}

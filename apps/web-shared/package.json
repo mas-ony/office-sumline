@@ -1,0 +1,22 @@
+{
+  "name": "@sumline/web-shared",
+  "version": "0.1.0",
+  "private": true,
+  "description": "What Sumline's React and Vue apps share: the page shell and styles, the public files and the build plugins",
+  "type": "module",
+  "exports": {
+    "./shell": "./src/shell.ts",
+    "./app.css": "./src/app.css"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@sumline/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.1",
+    "typescript": "5.9.3",
+    "vite": "7.3.6"
+  }
+}

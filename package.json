@@ -1,0 +1,38 @@
+{
+  "name": "sumline",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser-based XLSX spreadsheet editor for desktop and mobile, with formulas, charts, shapes and printing to PDF; React and Vue components",
+  "homepage": "https://github.com/mas-ony/office-sumline#readme",
+  "bugs": {
+    "url": "https://github.com/mas-ony/office-sumline/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mas-ony/office-sumline.git"
+  },
+  "license": "MIT",
+  "author": "Ony Octavianto",
+  "type": "module",
+  "packageManager": "pnpm@12.14.0",
+  "scripts": {
+    "dev": "pnpm --filter @sumline/web-react dev",
+    "dev:vue": "pnpm --filter @sumline/web-vue dev",
+    "build": "pnpm --filter \"./packages/*\" build && pnpm --filter \"./apps/*\" build",
+    "build:npm": "pnpm --filter @sumline/web-react build:npm",
+    "preview": "pnpm --filter @sumline/web-react preview",
+    "preview:vue": "pnpm --filter @sumline/web-vue preview",
+    "typecheck": "pnpm -r typecheck && tsc --noEmit -p tsconfig.e2e.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "fixtures": "node scripts/make-fixtures.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "24.19.1",
+    "fflate": "0.8.3",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  }
+}

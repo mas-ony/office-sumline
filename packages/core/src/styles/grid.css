@@ -1,0 +1,248 @@
+.xgrid {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+}
+
+.xgrid-scroller {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+  /* One-finger panning stays native (momentum scrolling); pinch is handled by the grid. */
+  touch-action: pan-x pan-y;
+  overscroll-behavior: contain;
+  outline: none;
+  cursor: cell;
+}
+
+.xgrid-spacer {
+  width: 1px;
+  height: 1px;
+}
+
+.xgrid-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.xgrid-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.xgrid-images {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.xgrid-image,
+.xgrid-chart {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: auto;
+  touch-action: none;
+  box-sizing: border-box;
+}
+
+.xgrid-image {
+  cursor: move;
+}
+
+.xgrid-object-body {
+  position: absolute;
+  inset: 0;
+}
+
+.xgrid-object-body > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.xgrid-chartobj .xgrid-object-body {
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.xgrid-shapeobj .xgrid-object-body > svg {
+  overflow: visible;
+}
+
+.xgrid-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.xgrid-image.selected {
+  outline: 1px solid #555555;
+}
+
+.xgrid-image-handle {
+  display: none;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+@media (pointer: coarse) {
+  .xgrid-image-handle {
+    width: 22px;
+    height: 22px;
+    margin: -11px 0 0 -11px;
+    border-radius: 50%;
+    border: 2px solid #e8595c;
+  }
+}
+
+.xgrid-image.selected .xgrid-image-handle {
+  display: block;
+}
+
+.h-nw { left: 0; top: 0; cursor: nwse-resize; }
+.h-n { left: 50%; top: 0; cursor: ns-resize; }
+.h-ne { left: 100%; top: 0; cursor: nesw-resize; }
+.h-e { left: 100%; top: 50%; cursor: ew-resize; }
+.h-se { left: 100%; top: 100%; cursor: nwse-resize; }
+.h-s { left: 50%; top: 100%; cursor: ns-resize; }
+.h-sw { left: 0; top: 100%; cursor: nesw-resize; }
+.h-w { left: 0; top: 50%; cursor: ew-resize; }
+
+.xchart-box {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  overflow: hidden;
+  font: 12px system-ui, sans-serif;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.xchart-shape {
+  border: 1px dashed #b0b4ba;
+  background: rgba(240, 242, 245, 0.4);
+}
+
+.xchart {
+  display: block;
+  font-family: 'Carlito', 'Calibri', Arial, sans-serif;
+}
+
+.xgrid-editor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: auto;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  padding: 1px 3px;
+  opacity: 0;
+  background: transparent;
+  color: transparent;
+  caret-color: transparent;
+  white-space: pre;
+  z-index: 4;
+}
+
+.xgrid-editor.editing {
+  opacity: 1;
+  caret-color: auto;
+  box-shadow: 0 0 0 1px #000000, 0 2px 8px rgba(0, 0, 0, 0.18);
+  z-index: 6;
+}
+
+.xgrid-handle {
+  position: absolute;
+  left: -14px;
+  top: -14px;
+  width: 28px;
+  height: 28px;
+  pointer-events: auto;
+  touch-action: none;
+  display: none;
+  z-index: 3;
+}
+
+.xgrid-handle::after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e8595c;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.xgrid-dv {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #c4c7cc;
+  border-radius: 3px;
+  background: #ffffff;
+  color: #444;
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.xgrid-tooltip {
+  position: absolute;
+  display: none;
+  max-width: 240px;
+  padding: 8px 10px;
+  border: 1px solid #e0c96a;
+  border-radius: 6px;
+  background: #fffbe6;
+  color: #333;
+  font: 12px/1.4 system-ui, sans-serif;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  z-index: 8;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.xgrid-tooltip hr {
+  border: 0;
+  border-top: 1px solid #ecdca0;
+  margin: 6px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .xgrid-tooltip {
+    background: #3a3520;
+    color: #f2ecd0;
+    border-color: #6b5f2a;
+  }
+}

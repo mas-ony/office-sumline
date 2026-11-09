@@ -1,0 +1,29 @@
+{
+  "name": "Sumline",
+  "short_name": "Sumline",
+  "description": "Open, edit and save Excel spreadsheets (XLSX, XLS, XLSM, XLSB, CSV) in your browser on desktop and mobile.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "any",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "file_handlers": [
+    {
+      "action": "./",
+      "accept": {
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": [".xlsx"],
+        "application/vnd.ms-excel.sheet.macroEnabled.12": [".xlsm"],
+        "application/vnd.ms-excel.sheet.binary.macroEnabled.12": [".xlsb"],
+        "application/vnd.ms-excel": [".xls"],
+        "text/csv": [".csv"]
+      }
+    }
+  ]
+}

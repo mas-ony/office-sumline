@@ -1,0 +1,63 @@
+{
+  "name": "@sumline/core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Spreadsheet engine (XLSX, XLS, XLSB, CSV and TSV files, formulas, charts, shapes, printing and PDF), page API and interface state of Sumline, shared by its React and Vue interfaces",
+  "homepage": "https://github.com/mas-ony/office-sumline#readme",
+  "bugs": {
+    "url": "https://github.com/mas-ony/office-sumline/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mas-ony/office-sumline.git",
+    "directory": "packages/core"
+  },
+  "license": "MIT",
+  "author": "Ony Octavianto",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./views": "./src/views.ts",
+    "./style.css": "./src/styles/index.css"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
+      },
+      "./views": {
+        "types": "./dist/views.d.ts",
+        "import": "./dist/views.js"
+      },
+      "./style.css": "./dist/styles/index.css"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fontsource/arimo": "5.3.0",
+    "@fontsource/carlito": "5.3.0",
+    "@fontsource/cousine": "5.3.0",
+    "@fontsource/tinos": "5.3.0",
+    "@formulajs/formulajs": "4.6.1",
+    "fflate": "0.8.3",
+    "numfmt": "3.2.6"
+  },
+  "devDependencies": {
+    "@material-design-icons/svg": "0.14.15",
+    "@types/node": "24.19.1",
+    "exceljs": "4.4.0",
+    "jsdom": "27.4.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.6",
+    "vitest": "3.2.7"
+  }
+}

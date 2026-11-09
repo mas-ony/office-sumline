@@ -1,0 +1,58 @@
+{
+  "name": "@sumline/vue",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sumline spreadsheet editor as a Vue component",
+  "homepage": "https://github.com/mas-ony/office-sumline#readme",
+  "bugs": {
+    "url": "https://github.com/mas-ony/office-sumline/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mas-ony/office-sumline.git",
+    "directory": "packages/vue"
+  },
+  "license": "MIT",
+  "author": "Ony Octavianto",
+  "type": "module",
+  "sideEffects": ["*.css"],
+  "exports": {
+    ".": "./src/index.ts",
+    "./style.css": "./style.css"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
+      },
+      "./style.css": "./style.css"
+    }
+  },
+  "files": [
+    "dist",
+    "style.css"
+  ],
+  "scripts": {
+    "build": "vite build && vue-tsc -p tsconfig.build.json",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@sumline/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.1",
+    "@vitejs/plugin-vue": "6.0.10",
+    "jsdom": "27.4.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.6",
+    "vitest": "3.2.7",
+    "vue": "3.5.44",
+    "vue-tsc": "3.3.13"
+  }
+}
