@@ -1,8 +1,19 @@
 {
   "name": "@sumline/vue",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
   "description": "Sumline spreadsheet editor as a Vue component",
+  "keywords": [
+    "charts",
+    "excel",
+    "formula-engine",
+    "office",
+    "pdf",
+    "spreadsheet",
+    "spreadsheet-editor",
+    "typescript",
+    "vue",
+    "xlsx"
+  ],
   "homepage": "https://github.com/mas-ony/office-sumline#readme",
   "bugs": {
     "url": "https://github.com/mas-ony/office-sumline/issues"

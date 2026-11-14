@@ -1,6 +1,6 @@
 {
   "name": "sumline",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Browser-based XLSX spreadsheet editor for desktop and mobile, with formulas, charts, shapes and printing to PDF: the built app, ready to host as static files",
   "keywords": [
     "charts",

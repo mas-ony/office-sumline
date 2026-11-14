@@ -1,8 +1,18 @@
 {
   "name": "@sumline/core",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
   "description": "Spreadsheet engine (XLSX, XLS, XLSB, CSV and TSV files, formulas, charts, shapes, printing and PDF), page API and interface state of Sumline, shared by its React and Vue interfaces",
+  "keywords": [
+    "charts",
+    "excel",
+    "formula-engine",
+    "office",
+    "pdf",
+    "spreadsheet",
+    "spreadsheet-editor",
+    "typescript",
+    "xlsx"
+  ],
   "homepage": "https://github.com/mas-ony/office-sumline#readme",
   "bugs": {
     "url": "https://github.com/mas-ony/office-sumline/issues"

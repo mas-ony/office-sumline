@@ -27,6 +27,7 @@ pnpm dev:vue         # the Vue app: http://localhost:5183
 pnpm build           # the packages into packages/*/dist, the apps into apps/web-react/dist and apps/web-vue/dist
                      # (installable PWAs when served over HTTPS)
 pnpm build:npm       # the React app without source maps in npm/dist, for the npm package
+pnpm -r publish --access public  # after pnpm build: the packages in packages/ to npm (pnpm turns workspace:* into versions)
 pnpm preview         # serve the React app's build on port 4175
 pnpm preview:vue     # serve the Vue app's build on port 4183
 pnpm test            # unit tests (formula engine, XLSX/XLS/XLSB, charts, shapes, print layout, PDF, dialog logic)
@@ -81,7 +82,8 @@ feature-detects all of these.
 ### Components
 
 `@sumline/react` and `@sumline/vue` each export a `SumlineEditor` component and a `mount()`
-function, with the same options. Import the package's `style.css` once (the fonts and the editor's
+function, with the same options. Both are on npm: `npm install @sumline/react react react-dom` or
+`npm install @sumline/vue vue`. Import the package's `style.css` once (the fonts and the editor's
 styles). The editor fills the height of its element, so give it (or its container) a height.
 
 ```tsx
@@ -204,8 +206,6 @@ await ed.open(blob, 'Budget.xlsx');   // then the API serves the new workbook
 
 ## Known gaps
 
-- The packages in `packages/` are not published to npm yet (they are marked private); another
-  project can use them from this workspace or from `pnpm pack` archives.
 - Excel 5.0/95 `.xls` files are not supported; XLS and XLSB files are saved as XLSX.
 - Formulas that use tokens the binary readers cannot express (external workbook references,
   data tables) keep their last calculated value.

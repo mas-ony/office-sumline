@@ -1,8 +1,19 @@
 {
   "name": "@sumline/react",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
   "description": "Sumline spreadsheet editor as a React component",
+  "keywords": [
+    "charts",
+    "excel",
+    "formula-engine",
+    "office",
+    "pdf",
+    "react",
+    "spreadsheet",
+    "spreadsheet-editor",
+    "typescript",
+    "xlsx"
+  ],
   "homepage": "https://github.com/mas-ony/office-sumline#readme",
   "bugs": {
     "url": "https://github.com/mas-ony/office-sumline/issues"

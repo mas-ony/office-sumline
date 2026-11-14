@@ -6,9 +6,9 @@ and XLSX reader and writer. On phones and tablets it has a touch layout, and it 
 plain HTTP address on the local network.
 
 This package is the built app: static files to put on a web server. It has no dependencies and
-nothing to build. The React and Vue packages, for putting the editor inside an app instead, are in
-the [repository](https://github.com/mas-ony/office-sumline) (`packages/react` and `packages/vue`) and
-are not on npm yet.
+nothing to build. The React and Vue packages, for putting the editor inside an app instead, are
+[`@sumline/react`](https://www.npmjs.com/package/@sumline/react) and
+[`@sumline/vue`](https://www.npmjs.com/package/@sumline/vue).
 
 ## Install
 
